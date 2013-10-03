@@ -244,6 +244,7 @@
                write (6,'((1x,1p, 6(1x,d11.4)))') (x(i),i = 1,n)
                write (6,*) 'Final G='
                write (6,'((1x,1p, 6(1x,d11.4)))') (g(i),i = 1,n)
+               write (*, *) 'Value of f (old code) =', f
             endif
 
           endif
