@@ -227,7 +227,8 @@
          else
 
            if (task(1:5) .eq. 'NEW_X') then        
-
+              if (isave(30) .eq. 10000) &
+                   task= 'STOP: TOTAL NUMBER OF ITERATIONS REACHED 10000'
 !        the minimization routine has returned with a new iterate.
 !        The time limit has not been reached, and we test whether
 !        the following two stopping tests are satisfied:
@@ -235,13 +236,13 @@
 !        1) Terminate if the total number of f and g evaluations
 !             exceeds 900.
               
-            if (isave(34) .ge. 900) &
-            task='STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT'
+!            if (isave(34) .ge. 900) &
+!            task='STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT'
 
 !        2) Terminate if  |proj g|/(1+|f|) < 1.0d-10.
 
-            if (dsave(13) .le. 1.d-10*(1.0d0 + abs(f))) &
-            task='STOP: THE PROJECTED GRADIENT IS SUFFICIENTLY SMALL'
+!            if (dsave(13) .le. 1.d-10*(1.0d0 + abs(f))) &
+!            task='STOP: THE PROJECTED GRADIENT IS SUFFICIENTLY SMALL'
 
 !        We wish to print the following information at each iteration:
 !          1) the current iteration number, isave(30),
@@ -252,28 +253,26 @@
 !        See the comments at the end of driver1 for a description
 !        of the variables isave and dsave.
          
-            write (6,'(2(a,i5,4x),a,1p,d12.5,4x,a,1p,d12.5)') 'Iterate' &
-            ,isave(30),'nfg =',isave(34),'f =',f,'|proj g| =',dsave(13)
+!            write (6,'(2(a,i5,4x),a,1p,d12.5,4x,a,1p,d12.5)') 'Iterate' &
+!            ,isave(30),'nfg =',isave(34),'f =',f,'|proj g| =',dsave(13)
 
 !        If the run is to be terminated, we print also the information
 !        contained in task as well as the final value of x.
 
-            if (task(1:4) .eq. 'STOP') then
-               write (6,*) task  
-               write (6,*) 'Final X='
-               write (6,'((1x,1p, 6(1x,d11.4)))') (x(i),i = 1,n)
-               write (6,*) 'Final G='
-               write (6,'((1x,1p, 6(1x,d11.4)))') (g(i),i = 1,n)
-               write (*,*) 'mnp = ', m, n, p
-               write (*,*) 'Value of f = (Nocedals code)', f
-               write (*,*) 'Iterate ', isave(30)
-            endif
-
           endif
         end if 
       end do
- 
+      call timer(time2)
+      write (*,*) 'final results rosenbrock (Nocedal) run:', m, n, p, isave(30), isave(34), f, dsave(13), time2-time1, task
 !     If task is neither FG nor NEW_X we terminate execution.
+      write (6,*) task  
+      write (6,*) 'Final X='
+      write (6,'((1x,1p, 6(1x,d11.4)))') (x(i),i = 1,n)
+      write (6,*) 'Final G='
+      write (6,'((1x,1p, 6(1x,d11.4)))') (g(i),i = 1,n)
+      write (*,*) 'mnp = ', m, n, p
+      write (*,*) 'Value of f = (Nocedals code)', f
+      write (*,*) 'Iterate ', isave(30)
 
       end program driver
 
