@@ -146,7 +146,7 @@
       task = 'START'
 
 !        ------- the beginning of the loop ----------
-
+x = 3d0
 !     We begin counting the CPU time.
 
       call timer(time1)
