@@ -67,8 +67,7 @@
 
       integer,  parameter    :: iprint = -1
       integer,  parameter    :: dp = kind(1.0d0)
-      real(dp), parameter    :: factr  = 0.0d0, pgtol  = 0.0d0, &
-                                tlimit = 10.0d0
+      real(dp), parameter    :: factr  = 0.0d0, tlimit = 10.0d0
 !
       character(len=60)      :: task, csave
       logical                :: lsave(4)
@@ -78,7 +77,7 @@
       integer,  allocatable  :: nbd(:), iwa(:)
       real(dp), allocatable  :: x(:), l(:), u(:), g(:), wa(:)
 !
-      real(dp)               :: t1, t2, time1, time2, p, z, r1
+      real(dp)               :: t1, t2, time1, time2, p, z, r1, pgtol
       integer                :: i, j, m, n
 
       ! Get outside parameters
@@ -91,6 +90,9 @@
       
       call getarg(3, arg)
       read(arg,*) p
+
+      call getarg(4, arg)
+      read(arg,*) pgtol
 
       allocate ( nbd(n), x(n), l(n), u(n), g(n) )
       allocate ( iwa(3*n) )
@@ -126,15 +128,18 @@
 
 !     We now define the starting point.
 
-      do 14 i=1, n
-         x(i)=3.0d0
-  14  continue
- 
-!     We now write the heading of the output.
+!      do 14 i=1, n
+!         x(i)=3.0d0
+!  14  continue
 
-      write (6,16)
-  16  format(/,5x, 'Solving sample problem.',&
-             /,5x, ' (f = 0.0 at the optimal solution.)',/) 
+         do i=1, n
+            x(i) = (u(i) + l(i)) / 2.0d0
+         enddo
+         
+         x(1) = x(1) - 1d0
+         do 14 i=2, n
+            x(i)=x(i) - (1-2d0**(1-i))
+14          continue  
 
 !     We start the iteration by initializing task.
  
@@ -263,16 +268,16 @@
         end if 
       end do
       call timer(time2)
-      write (*,*) 'final results rosenbrock (Nocedal) run:', m, n, p, isave(30), isave(34), f, dsave(13), time2-time1, task
+      write (*,*) 'final results rosenbrock (Nocedal) run:', m, n, p, pgtol, isave(30), isave(34), f, dsave(13), task
 !     If task is neither FG nor NEW_X we terminate execution.
-      write (6,*) task  
-      write (6,*) 'Final X='
-      write (6,'((1x,1p, 6(1x,d11.4)))') (x(i),i = 1,n)
-      write (6,*) 'Final G='
-      write (6,'((1x,1p, 6(1x,d11.4)))') (g(i),i = 1,n)
-      write (*,*) 'mnp = ', m, n, p
-      write (*,*) 'Value of f = (Nocedals code)', f
-      write (*,*) 'Iterate ', isave(30)
+!      write (6,*) task  
+!      write (6,*) 'Final X='
+!      write (6,'((1x,1p, 6(1x,d11.4)))') (x(i),i = 1,n)
+!      write (6,*) 'Final G='
+!      write (6,'((1x,1p, 6(1x,d11.4)))') (g(i),i = 1,n)
+!      write (*,*) 'mnp = ', m, n, p
+!      write (*,*) 'Value of f = (Nocedals code)', f
+!      write (*,*) 'Iterate ', isave(30)
 
       end program driver
 

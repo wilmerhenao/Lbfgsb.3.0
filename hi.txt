@@ -1,0 +1,60 @@
+ final results rosenbrock (Nocedal) run:           5           2   2.0000000000000000                1           2   81.000000000000000        0.0000000000000000        6.2000006437301636E-005 CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL            
+ Value of f = (Nocedals code)   81.000000000000000     
+ final results rosenbrock (Nocedal) run:          10           2   2.0000000000000000                1           2   81.000000000000000        0.0000000000000000        4.9000023864209652E-005 CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL            
+ Value of f = (Nocedals code)   81.000000000000000     
+ final results rosenbrock (Nocedal) run:          20           2   2.0000000000000000                1           2   81.000000000000000        0.0000000000000000        5.3999945521354675E-005 CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL            
+ Value of f = (Nocedals code)   81.000000000000000     
+ final results rosenbrock (Nocedal) run:           5           4   2.0000000000000000               11          56   9305.9334781010293        3.5673652448053872E-005   2.8099992778152227E-004 ABNORMAL_TERMINATION_IN_LNSRCH                              
+ Value of f = (Nocedals code)   9305.9334781010293     
+ final results rosenbrock (Nocedal) run:          10           4   2.0000000000000000               11          17   9305.9334781010311        4.3374667768603103E-007   4.3400004506111145E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   9305.9334781010311     
+ final results rosenbrock (Nocedal) run:          20           4   2.0000000000000000               11          17   9305.9334781010311        4.3374667768603103E-007   3.1000003218650818E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   9305.9334781010311     
+ final results rosenbrock (Nocedal) run:           5           6   2.0000000000000000               12          18   18531.143497015048        5.7989026913674024E-008   2.5399995502084494E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   18531.143497015048     
+ final results rosenbrock (Nocedal) run:          10           6   2.0000000000000000               11          17   18531.143497015051        3.5727976239741110E-006   3.0999991577118635E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   18531.143497015051     
+ final results rosenbrock (Nocedal) run:          20           6   2.0000000000000000               11          17   18531.143497015051        3.5727976239741110E-006   3.4199992660433054E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   18531.143497015051     
+ final results rosenbrock (Nocedal) run:           5           8   2.0000000000000000               16          22   27756.353515929062        2.1426373564281675E-008   3.3800001256167889E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   27756.353515929062     
+ final results rosenbrock (Nocedal) run:          10           8   2.0000000000000000               15          21   27756.353515929066        2.0768311514984816E-008   5.0099997315555811E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   27756.353515929066     
+ final results rosenbrock (Nocedal) run:          20           8   2.0000000000000000               15          28   27756.353515929062        2.6072917762576253E-006   5.8400002308189869E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   27756.353515929062     
+ final results rosenbrock (Nocedal) run:           5          10   2.0000000000000000               16          22   36981.563534843088        5.3631474372650700E-006   4.7500000800937414E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   36981.563534843088     
+ final results rosenbrock (Nocedal) run:          10          10   2.0000000000000000               16          22   36981.563534843088        1.7005516212975635E-006   5.4899998940527439E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   36981.563534843088     
+ final results rosenbrock (Nocedal) run:          20          10   2.0000000000000000               17          23   36981.563534843081        3.4218885502923513E-008   7.9600012395530939E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   36981.563534843081     
+ final results rosenbrock (Nocedal) run:           5          20   2.0000000000000000               18          26   83107.613629413157        7.8270574022099026E-008   5.7399994693696499E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   83107.613629413157     
+ final results rosenbrock (Nocedal) run:          10          20   2.0000000000000000               19          43   83107.613629413143        3.2624337563902372E-005   8.5999991279095411E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   83107.613629413143     
+ final results rosenbrock (Nocedal) run:          20          20   2.0000000000000000               17          22   83107.613629413143        3.8040810892425725E-006   1.6649999888613820E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   83107.613629413143     
+ final results rosenbrock (Nocedal) run:           5          50   2.0000000000000000               11          18   221485.76391312343        7.9376945905096363E-007   4.3300003744661808E-004 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   221485.76391312343     
+ final results rosenbrock (Nocedal) run:          10          50   2.0000000000000000               12          63   221485.76391312320        2.1262898911800221E-005   8.7099988013505936E-004 ABNORMAL_TERMINATION_IN_LNSRCH                              
+ Value of f = (Nocedals code)   221485.76391312320     
+ final results rosenbrock (Nocedal) run:          20          50   2.0000000000000000               12          63   221485.76391312320        2.1262898911800221E-005   2.7130000526085496E-003 ABNORMAL_TERMINATION_IN_LNSRCH                              
+ Value of f = (Nocedals code)   221485.76391312320     
+ final results rosenbrock (Nocedal) run:           5         100   2.0000000000000000               17          22   452116.01438597392        2.5161620243352445E-005   1.0180000681430101E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   452116.01438597392     
+ final results rosenbrock (Nocedal) run:          10         100   2.0000000000000000               18          38   452116.01438597351        4.0438114723428953E-006   1.8229999113827944E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   452116.01438597351     
+ final results rosenbrock (Nocedal) run:          20         100   2.0000000000000000               17          22   452116.01438597392        1.9628125684789666E-005   1.7770000267773867E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   452116.01438597392     
+ final results rosenbrock (Nocedal) run:           5         200   2.0000000000000000               19          63   913376.51533167227        2.8587114940137326E-005   2.8230000752955675E-003 ABNORMAL_TERMINATION_IN_LNSRCH                              
+ Value of f = (Nocedals code)   913376.51533167227     
+ final results rosenbrock (Nocedal) run:          10         200   2.0000000000000000               18          32   913376.51533167239        3.4949762519431715E-004   5.1899999380111694E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   913376.51533167239     
+ final results rosenbrock (Nocedal) run:          20         200   2.0000000000000000               18          54   913376.51533167239        6.3277630596303425E-004   4.6869998332113028E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   913376.51533167239     
+ final results rosenbrock (Nocedal) run:           5        1000   2.0000000000000000               20          48   4603460.5228972193        3.0136352734189131E-005   1.3727999874390662E-002 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   4603460.5228972193     
+ final results rosenbrock (Nocedal) run:          10        1000   2.0000000000000000               18          36   4603460.5228972202        3.2368325044274115E-004   7.1420001331716776E-003 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+ Value of f = (Nocedals code)   4603460.5228972202     
+ final results rosenbrock (Nocedal) run:          20        1000   2.0000000000000000               19          70   4603460.5228972137        1.1830388984890305E-005   1.1304999527055770E-002 ABNORMAL_TERMINATION_IN_LNSRCH                              
+ Value of f = (Nocedals code)   4603460.5228972137     

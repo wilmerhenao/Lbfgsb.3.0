@@ -849,7 +849,8 @@ c                                terminate the algorithm.
       endif 
 
       ddum = max(abs(fold), abs(f), one)
-      if ((fold - f) .le. tol*ddum) then
+c      if ((fold - f) .le. tol*ddum) then
+      if (.false.) then
 c                                        terminate the algorithm.
          task = 'CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH'
          if (iback .ge. 10) info = -5
@@ -2969,19 +2970,21 @@ c     ************
       double precision one,zero
       parameter        (one=1.0d0,zero=0.0d0)
 
+      
       sbgnrm = zero
-      do 15 i = 1, n
-        gi = g(i)
-        if (nbd(i) .ne. 0) then
-           if (gi .lt. zero) then
-              if (nbd(i) .ge. 2) gi = max((x(i)-u(i)),gi)
-           else
-              if (nbd(i) .le. 2) gi = min((x(i)-l(i)),gi)
-           endif
-        endif
-        sbgnrm = max(sbgnrm,abs(gi))
-  15  continue
 
+      do 15 i = 1, n
+         gi = g(i)
+
+         if (gi .lt. zero) then
+            if (nbd(i) .ge. 2) gi = max((x(i)-u(i)),gi)
+         else
+            if (nbd(i) .le. 2) gi = min((x(i)-l(i)),gi)
+         endif
+c     Add squares
+         sbgnrm = sbgnrm + gi * gi 
+ 15   continue
+      sbgnrm = sqrt(sbgnrm)
       return
 
       end
@@ -3660,7 +3663,7 @@ c     point obtained during the search.
 
 c     Obtain another function and derivative.
 
-      task = 'FG'
+      task = 'FG'  ! to be evaluated at stp
 
  1000 continue
 
