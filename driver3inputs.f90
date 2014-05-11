@@ -146,7 +146,6 @@
       task = 'START'
 
 !        ------- the beginning of the loop ----------
-x = 3d0
 !     We begin counting the CPU time.
 
       call timer(time1)
@@ -231,7 +230,9 @@ x = 3d0
 !          go back to the minimization routine.
          else
 
-           if (task(1:5) .eq. 'NEW_X') then        
+           if (task(1:5) .eq. 'NEW_X') then  
+              write(*, *) isave(30)
+              write(*,*) x
               if (isave(30) .eq. 10000) &
                    task= 'STOP: TOTAL NUMBER OF ITERATIONS REACHED 10000'
 !        the minimization routine has returned with a new iterate.
@@ -269,6 +270,7 @@ x = 3d0
       end do
       call timer(time2)
       write (*,*) 'final results rosenbrock (Nocedal) run:', m, n, p, pgtol, isave(30), isave(34), f, dsave(13), task
+      
 !     If task is neither FG nor NEW_X we terminate execution.
 !      write (6,*) task  
 !      write (6,*) 'Final X='

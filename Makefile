@@ -16,7 +16,7 @@ LINPACK = linpack.f
 BLAS    = blas.f
 TIMER   = timer.f
 
-all :  lbfgsb_90_3_INPUTS
+all :  lbfgsb_90_3_INPUTS lbfgsb_90_3
 
 
 lbfgsb_77_1 : $(DRIVER1_77) $(LBFGSB) $(LINPACK) $(BLAS) $(TIMER)
